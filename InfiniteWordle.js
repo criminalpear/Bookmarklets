@@ -1,1 +1,1 @@
-
+javascript:(function(){toaster=document.querySelector("game-app").shadowRoot.querySelector("#game-toaster");app=new wordle.bundle.GameApp();t = document.createElement("game-toast");t.setAttribute("text", app.solution.toUpperCase());t.setAttribute("duration", 2e3);toaster.prepend(t);})();
