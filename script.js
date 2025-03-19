@@ -1,4 +1,4 @@
-// Bookmarklet data with corrected names and descriptions
+// Bookmarklet data with corrected names, descriptions, and matched codes
 const bookmarklets = [
     {
         name: "15000Hz",
@@ -33,7 +33,7 @@ const bookmarklets = [
     {
         name: "Colorful",
         description: "Applies a vibrant, multi-colored theme to the webpage, possibly cycling through colors or enhancing existing colors for a lively effect.",
-        code: "javascript:void(0);" // Replace with actual code from Colorful.js
+        code: "javascript:(function(){function c(){return\"#\"+Math.floor(16777215*Math.random()).toString(16)}function r(e){return Math.floor(Math.random()*e)+1}function l(e){e.requestFullscreen?e.requestFullscreen():e.mozRequestFullScreen?e.mozRequestFullScreen():e.webkitRequestFullscreen?e.webkitRequestFullscreen():e.msRequestFullscreen&&e.msRequestFullscreen()}var d=document;d.head.innerHTML=\"<style>*{margin:0; overflow:hidden; padding:0;overflow:hidden;} div{  transform-origin: 50% 50%; width:100%; height:1px; position:relative; z-index:1;} </style>\",d.body.innerHTML=\"\";var w=window.screen.availHeight;for(d.body.addEventListener(\"click\",function(){l(d.documentElement)}),i=0;w>=i;i++){var z=d.createElement(\"div\");z.id=\"b\"+i,z.style.backgroundColor=c(),d.body.appendChild(z)}setInterval(function(){for(var e=0;10>e;e++)d.getElementById(\"b\"+r(w)).style.backgroundColor=c(),d.getElementById(\"b\"+r(w)).style.height=r(4)+\"px\",d.body.style.backgroundColor=c(),d.body.style.transform=r(256)>128?\"scale(3) rotate(\"+r(35)+\"deg)\":\"rotate(0deg) scale(1)\";window.scrollTo(0,document.body.scrollHeight)},10),setInterval(function(){window.scrollTo(0,0)},50);})()"
     },
     {
         name: "ColorYourPage",
@@ -63,12 +63,12 @@ const bookmarklets = [
     {
         name: "Flashlight",
         description: "Creates a flashlight effect where a circular spotlight follows your mouse, illuminating parts of the page while dimming the rest.",
-        code: "javascript:void(0);" // Replace with actual code from Flashlight.js
+        code: "javascript:(function(){var js=document.body.appendChild(document.createElement(\"script\"));js.onerror=function(){alert(\"Sorry, the script could not be loaded.\")};js.src=\"https://rawgit.com/Krazete/bookmarklets/master/mouselight.js\"})();"
     },
     {
         name: "FontFinder",
         description: "Identifies and displays the fonts used on the webpage, useful for web developers or designers inspecting typography.",
-        code: "javascript:void(0);" // Replace with actual code from FontFinder.js
+        code: "javascript:(function(){function getSelectedNode(){if(window.getSelection().focusNode===null)return null;return window.getSelection().focusNode.parentNode}function getNodeFontStack(node){return window.getComputedStyle(node).fontFamily}function getFirstAvailableFont(fonts){for(let font of fonts){let fontName=font.trim().replace(/\"/g,'');let isAvailable=document.fonts.check(`16px ${fontName}`);if(!isAvailable)continue;return fontName}}let node=getSelectedNode();if(!node){window.alert('Please select a string of text and try again.');return}let fonts=getNodeFontStack(node).split(',');let firstAvailableFont=getFirstAvailableFont(fonts);window.alert(`Font: ${firstAvailableFont}`)})()"
     },
     {
         name: "Glitch",
@@ -78,32 +78,32 @@ const bookmarklets = [
     {
         name: "Grayscale",
         description: "Converts the entire webpage to grayscale, removing all colors to create a monochromatic look, often used for accessibility or stylistic purposes.",
-        code: "javascript:void(0);" // Replace with actual code from Grayscale.js
+        code: "javascript:(function () { document.body.style.filter = 'grayscale(100%)'; })();"
     },
     {
         name: "GuessTheNumber",
         description: "Launches a simple 'guess the number' game in a pop-up, where you try to guess a randomly generated number with hints provided.",
-        code: "javascript:void(0);" // Replace with actual code from GuessTheNumber.js
+        code: "javascript:var x=0;alert(\"Guess A Number Between 1 And 20\");function getRandomNumberBetween(min,max){ return Math.floor(Math.random()*(max-min+1)+min); };a=getRandomNumberBetween(0,21);while (true){v=prompt(\"What Number Do You Guess?\");if (v==a){x=x+1;alert(\"You Got It! It Only Took You \"+x+\" Tries!\");break} else if (v>20){alert(\"Please Guess A Number Between Or Equal To 1 And 20!\")} else if (v<1){alert(\"Please Guess A Number Between Or Equal To 1 And 20!\")} else if (v>a){x=x+1;alert(\"Too High!\")} else if (v<a){x=x+1;alert(\"Too Low!\")}}"
     },
     {
         name: "HighContrast",
         description: "Increases the contrast of the webpage by adjusting colors, making text and elements easier to read, especially for accessibility purposes.",
-        code: "javascript:void(0);" // Replace with actual code from HighContrast.js
+        code: "javascript:(function () { document.body.style.filter = 'invert(100%)'; })();" // Tentative match; adjust if incorrect
     },
     {
         name: "HistoryFlooder",
         description: "Floods the browser’s history with entries (e.g., by repeatedly adding the current URL), potentially to obscure previous browsing activity.",
-        code: "javascript:void(0);" // Replace with actual code from HistoryFlooder.js
+        code: "javascript:var num=prompt(\"History Flood Amount:\");done=false;x=window.location.href;for (var i=1; i<=num; i++){history.pushState(0, 0, i==num?x:i.toString());if(i==num){done=true}}if(done===true){alert(\"History Flood Successful! \"+window.location.href+\" Now Appears In Your History \"+num+(num==1?\" Time!\":\" Times!\"))}"
     },
     {
         name: "InfiniteWordle",
         description: "Likely an infinite version of the Wordle game, where you can keep playing endlessly with new words, adding a challenging twist to the popular word puzzle.",
-        code: "javascript:void(0);" // Replace with actual code from InfiniteWordle.js
+        code: "javascript:(function(){toaster=document.querySelector(\"game-app\").shadowRoot.querySelector(\"#game-toaster\");app=new wordle.bundle.GameApp();t = document.createElement(\"game-toast\");t.setAttribute(\"text\", app.solution.toUpperCase());t.setAttribute(\"duration\", 2e3);toaster.prepend(t);})();"
     },
     {
         name: "MatrixRain",
         description: "Similar to CustomMatrixRain.js, this displays a 'Matrix'-style digital rain effect with falling characters across the page.",
-        code: "javascript:void(0);" // Replace with actual code from MatrixRain.js
+        code: "javascript:(function(){var wn=window,w,h,o={},m,dc,b,c='ABCDEFGHIJKLM1234567890nopqrstuvwxyz',y=setInterval,z=clearInterval,t=1;function x(){dc=document;b=dc.body;b.innerHTML='';bs=b.style;w=wn.innerWidth;h=wn.innerHeight;bs.backgroundColor='black';bs.overflow='hidden';m=y(n,25);dc.addEventListener('keydown',function(e){if(e.keyCode==83){if(t)z(m);else m=y(n,25);t=!t}},0)}function g(i){return dc.getElementById(i)}function r(d,m){return Math.floor(Math.random()*d)+m}function a(i){var d=g(i),ds=d.style,t=parseInt(ds.top),k=o[i];if(t<h){ds.top=(t+10)+'px'}else{z(k);b.removeChild(d);delete k}}function n(){var d=dc.createElement('div'),dt=new Date(),i='m_'+dt.getTime(),ds=d.style,v=ds.visibility,j=0,u=[],l=r(21,4),q=c.length,p;d.id=i;ds.width='5px';ds.opacity=r(.3,.7);ds.fontSize=r(8,8)+'px';ds.lineHeight='8px';ds.color='green';ds.position='absolute';ds.left=r(w,0)+'px';v='hidden';while(j<l){p=r(q,0);u[j]=c.substring(p,p+1);j++}d.innerHTML=u.join(\"\\n\");b.appendChild(d);ds.top=-d.offsetHeight+'px';v='visible';o[i]=y(function(){a(i)},r(20,40))}x();})()"
     },
     {
         name: "MobileController",
