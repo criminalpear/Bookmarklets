@@ -35,7 +35,7 @@ Here’s a sneak peek at some of the bookmarklets included:
 - **MatrixRain**: Turns your page into a "Matrix"-style digital rain display.
 - **Virus0**: A prank that makes your screen look hacked (don’t worry, it’s harmless!).
 
-Check the full list on the site, in [`script.js`](script.js), or in [`bookmarklets`](bookmarklets)
+Check the full list on the site, in [`script.js`](script.js), or in [`bookmarklets`](bookmarklets).
 
 ## Project Structure
 
