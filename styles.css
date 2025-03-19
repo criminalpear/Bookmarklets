@@ -1,34 +1,38 @@
 /* Dark mode with eye-friendly colors */
 body {
     font-family: Arial, sans-serif;
-    max-width: 800px;
+    max-width: 90vw; /* Increased from 800px to 90% of viewport width */
     margin: 0 auto;
-    padding: 20px;
+    padding: 2vw; /* Scaled padding relative to viewport width (was 20px) */
     line-height: 1.6;
     background-color: #1e2525; /* Dark grayish background */
     color: #d4d4d4; /* Soft off-white text for readability */
+    min-height: 100vh; /* Ensures body takes full viewport height */
 }
 
 /* Headings with a soft accent color */
 h1 {
     color: #a3bffa; /* Light purple for headings */
+    font-size: 2.5rem; /* Increased for prominence (adjust as needed) */
 }
 
 /* Labels for the dropdown */
 label {
     color: #b0c4de; /* Light steel blue for labels */
+    font-size: 1.2rem; /* Slightly larger for visibility */
 }
 
 /* Dropdown styling */
 select {
-    padding: 5px;
-    margin: 10px 0;
-    width: 100%;
-    max-width: 300px;
+    padding: 10px; /* Increased from 5px for larger touch area */
+    margin: 1vw 0; /* Scaled margin (was 10px) */
+    width: 100%; /* Keeps full width of container */
+    max-width: 400px; /* Increased from 300px for larger dropdown */
     background-color: #2d3535; /* Slightly lighter dark shade for input */
     color: #d4d4d4; /* Soft off-white text */
     border: 1px solid #4a5e5e; /* Subtle border */
     border-radius: 5px;
+    font-size: 1.1rem; /* Larger text for readability */
 }
 
 /* Dropdown options */
@@ -39,27 +43,33 @@ select option {
 
 /* Description box */
 #description {
-    margin: 20px 0;
-    padding: 10px;
+    margin: 2vw 0; /* Scaled margin (was 20px) */
+    padding: 15px; /* Increased from 10px for more breathing room */
     background-color: #2a3232; /* Slightly lighter dark shade */
     border-radius: 5px;
     color: #c0c0c0; /* Light gray text */
     border: 1px solid #4a5e5e; /* Subtle border */
+    font-size: 1.1rem; /* Slightly larger text */
+    min-height: 100px; /* Ensures it’s visible even when empty */
 }
 
 /* Code container heading */
 #code-container h3 {
     color: #a3bffa; /* Light purple for consistency */
+    font-size: 1.5rem; /* Increased for prominence */
 }
 
 /* Code block */
 pre {
     background-color: #2a3232; /* Slightly lighter dark shade */
     color: #b0c4de; /* Light steel blue for code text */
-    padding: 10px;
+    padding: 15px; /* Increased from 10px */
     border-radius: 5px;
     overflow-x: auto;
     border: 1px solid #4a5e5e; /* Subtle border */
+    font-size: 1rem; /* Slightly larger for code readability */
+    max-height: 50vh; /* Limits height to half the viewport, with scroll if needed */
+    width: 100%; /* Ensures it takes full container width */
 }
 
 /* Links */
