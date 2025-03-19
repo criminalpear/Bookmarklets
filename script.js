@@ -7,6 +7,7 @@ const bookmarklets = [
     { name: "BubbleText", description: "Likely adds a bubbling or animated text effect to the page, where text floats or bounces, creating a playful or dynamic visual." },
     { name: "ClearLocalStorage", description: "Clears all data stored in the browser’s localStorage for the current website, useful for resetting site-specific settings or data." },
     { name: "Colorful", description: "Applies a vibrant, multi-colored theme to the webpage, possibly cycling through colors or enhancing existing colors for a lively effect." },
+    { name: "CookieClicker", description: "Creates a pop-up mod menu for Cookie Clicker which gives you 12 different hack options."},
     { name: "ColorYourPage", description: "Allows you to apply a custom color scheme to the entire webpage, such as changing the background or text colors, for personalization." },
     { name: "CustomCursor", description: "Replaces the default mouse cursor with a custom image or style, adding a unique visual flair to your browsing experience." },
     { name: "CustomMatrixRain", description: "Displays a 'Matrix'-style digital rain effect (falling green characters) across the webpage, mimicking the iconic visual from the movie." },
