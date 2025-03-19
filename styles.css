@@ -1,45 +1,74 @@
+/* Dark mode with eye-friendly colors */
 body {
     font-family: Arial, sans-serif;
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     line-height: 1.6;
+    background-color: #1e2525; /* Dark grayish background */
+    color: #d4d4d4; /* Soft off-white text for readability */
 }
 
+/* Headings with a soft accent color */
 h1 {
-    color: #333;
+    color: #a3bffa; /* Light purple for headings */
 }
 
+/* Labels for the dropdown */
+label {
+    color: #b0c4de; /* Light steel blue for labels */
+}
+
+/* Dropdown styling */
 select {
     padding: 5px;
     margin: 10px 0;
     width: 100%;
     max-width: 300px;
+    background-color: #2d3535; /* Slightly lighter dark shade for input */
+    color: #d4d4d4; /* Soft off-white text */
+    border: 1px solid #4a5e5e; /* Subtle border */
+    border-radius: 5px;
 }
 
+/* Dropdown options */
+select option {
+    background-color: #2d3535; /* Match the dropdown background */
+    color: #d4d4d4; /* Soft off-white text */
+}
+
+/* Description box */
 #description {
     margin: 20px 0;
     padding: 10px;
-    background-color: #f5f5f5;
+    background-color: #2a3232; /* Slightly lighter dark shade */
     border-radius: 5px;
+    color: #c0c0c0; /* Light gray text */
+    border: 1px solid #4a5e5e; /* Subtle border */
 }
 
-#code-container {
-    margin-top: 20px;
+/* Code container heading */
+#code-container h3 {
+    color: #a3bffa; /* Light purple for consistency */
 }
 
+/* Code block */
 pre {
-    background-color: #f0f0f0;
+    background-color: #2a3232; /* Slightly lighter dark shade */
+    color: #b0c4de; /* Light steel blue for code text */
     padding: 10px;
     border-radius: 5px;
     overflow-x: auto;
+    border: 1px solid #4a5e5e; /* Subtle border */
 }
 
+/* Links */
 a {
-    color: #0366d6;
+    color: #81a1c1; /* Soft blue for links */
     text-decoration: none;
 }
 
 a:hover {
+    color: #88c0d0; /* Slightly lighter blue on hover */
     text-decoration: underline;
 }
