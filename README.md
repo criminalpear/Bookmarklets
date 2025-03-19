@@ -1,4 +1,4 @@
-# Bookmarklets Collection
+# CriminalPear's Bookmarklet Collection
 
 Welcome to the **Bookmarklets Collection** by criminalpear! This project is a curated set of fun, useful, and creative bookmarklets that enhance your browsing experience. Hosted on GitHub Pages at [https://criminalpear.github.io/Bookmarklets/](https://criminalpear.github.io/Bookmarklets/), this site lets you explore, view, and grab the code for each bookmarklet directly from your browser.
 
