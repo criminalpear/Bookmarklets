@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CriminalPear's Bookmarklet Collection</title>
+    <meta name="description" content="A space-themed collection of fun, useful, and creative bookmarklets. Drag any one straight to your bookmarks bar.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated starfield background -->
+    <canvas id="stars" aria-hidden="true"></canvas>
+
+    <header class="hero">
+        <h1 class="glow">CriminalPear's <span>Bookmarklet</span> Collection</h1>
+        <p class="tagline">
+            Tiny scripts that live in your bookmarks bar. Drag one up, click it on any page, watch it work.
+        </p>
+        <p class="repo-link">
+            <a href="https://github.com/criminalpear/Bookmarklets" target="_blank" rel="noopener">★ View the source on GitHub</a>
+        </p>
+    </header>
+
+    <main>
+        <section class="controls">
+            <div class="search-wrap">
+                <input id="search" type="search" placeholder="Search bookmarklets…" autocomplete="off" aria-label="Search bookmarklets">
+            </div>
+            <div id="filters" class="filters" role="tablist" aria-label="Filter by category"></div>
+            <p id="count" class="count"></p>
+        </section>
+
+        <section id="grid" class="grid" aria-live="polite"></section>
+
+        <p id="empty" class="empty" hidden>No bookmarklets match your search. 🛰️</p>
+    </main>
+
+    <footer class="site-footer">
+        <p>Drag a launcher to your bookmarks bar, or use <strong>Copy</strong> and paste it into a new bookmark's URL field.</p>
+        <p class="muted">Made by criminalpear · Hosted on GitHub Pages</p>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
